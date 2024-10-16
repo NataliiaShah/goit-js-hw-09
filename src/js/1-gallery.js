@@ -1,4 +1,5 @@
-
+import SimpleLightbox from 'simplelightbox';
+import "simplelightbox/dist/simple-lightbox.min.css";
 
 const images = [
     {
@@ -83,3 +84,7 @@ const imgItems = images.map(({ preview, original, description }) =>
 
 gallery.insertAdjacentHTML('beforeend', imgItems);
 
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
